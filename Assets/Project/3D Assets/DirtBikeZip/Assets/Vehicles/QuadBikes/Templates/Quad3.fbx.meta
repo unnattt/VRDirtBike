@@ -1,0 +1,278 @@
+fileFormatVersion: 2
+guid: f860ff12f93104e6192086f4b3ee7053
+timeCreated: 1476738830
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: BachRightWheel
+    100004: BackDamper
+    100006: BackLeftWheel
+    100008: FrontLeftDamper
+    100010: FrontLeftWheel
+    100012: FrontRightDamper
+    100014: FrontRightWheel
+    100016: LeftSpringDownDetail
+    100018: LeftSpringUpDetail
+    100020: RightSpringDownDetail
+    100022: RightSpringUpDetail
+    100024: Rule
+    100026: Spring
+    100028: Spring 1
+    100030: Spring 2
+    100032: SpringDownDetail
+    100034: SpringUpDetail
+    100036: BodyCollider
+    100038: RuleCollider
+    100040: Wheels
+    100042: DamperPivot
+    100044: DownPivot
+    100046: DownPivot 1
+    100048: DownPivot 2
+    100050: RulePivot
+    100052: UpPivot
+    100054: UpPivot 1
+    100056: UpPivot 2
+    100058: BackAbsorber
+    100060: FrontLeftAbsorber
+    100062: FrontRightAbsorber
+    100064: BackSpringUpDetail
+    100066: Details
+    100068: Details 1
+    100070: Steering
+    100072: BackAbsorberDetails
+    100074: SteeringDetails
+    100076: CenterOfMass
+    100078: DownPivot1
+    100080: BackAngularAbsorber
+    100082: FrontLeftAngularAbsorber
+    100084: FrontRightAngularAbsorber
+    100086: BackLeftWheelPivot
+    100088: BackRightWheelPivot
+    100090: FrontLeftWheelPivot
+    100092: FrontRightWheelPivot
+    100094: BodyShape
+    100096: FrontLeftWheelTurn
+    100098: FrontRightWheelTurn
+    100100: Shape
+    100102: Shape 1
+    400000: //RootNode
+    400002: BachRightWheel
+    400004: BackDamper
+    400006: BackLeftWheel
+    400008: FrontLeftDamper
+    400010: FrontLeftWheel
+    400012: FrontRightDamper
+    400014: FrontRightWheel
+    400016: LeftSpringDownDetail
+    400018: LeftSpringUpDetail
+    400020: RightSpringDownDetail
+    400022: RightSpringUpDetail
+    400024: Rule
+    400026: Spring
+    400028: Spring 1
+    400030: Spring 2
+    400032: SpringDownDetail
+    400034: SpringUpDetail
+    400036: BodyCollider
+    400038: RuleCollider
+    400040: Wheels
+    400042: DamperPivot
+    400044: DownPivot
+    400046: DownPivot 1
+    400048: DownPivot 2
+    400050: RulePivot
+    400052: UpPivot
+    400054: UpPivot 1
+    400056: UpPivot 2
+    400058: BackAbsorber
+    400060: FrontLeftAbsorber
+    400062: FrontRightAbsorber
+    400064: BackSpringUpDetail
+    400066: Details
+    400068: Details 1
+    400070: Steering
+    400072: BackAbsorberDetails
+    400074: SteeringDetails
+    400076: CenterOfMass
+    400078: DownPivot1
+    400080: BackAngularAbsorber
+    400082: FrontLeftAngularAbsorber
+    400084: FrontRightAngularAbsorber
+    400086: BackLeftWheelPivot
+    400088: BackRightWheelPivot
+    400090: FrontLeftWheelPivot
+    400092: FrontRightWheelPivot
+    400094: BodyShape
+    400096: FrontLeftWheelTurn
+    400098: FrontRightWheelTurn
+    400100: Shape
+    400102: Shape 1
+    2300000: //RootNode
+    2300002: BachRightWheel
+    2300004: BackDamper
+    2300006: BackLeftWheel
+    2300008: FrontLeftDamper
+    2300010: FrontLeftWheel
+    2300012: FrontRightDamper
+    2300014: FrontRightWheel
+    2300016: LeftSpringDownDetail
+    2300018: LeftSpringUpDetail
+    2300020: RightSpringDownDetail
+    2300022: RightSpringUpDetail
+    2300024: Rule
+    2300026: Spring
+    2300028: Spring 1
+    2300030: Spring 2
+    2300032: SpringDownDetail
+    2300034: SpringUpDetail
+    2300036: BodyCollider
+    2300038: RuleCollider
+    2300040: BackAbsorber
+    2300042: FrontLeftAbsorber
+    2300044: FrontRightAbsorber
+    2300046: BackSpringUpDetail
+    2300048: Details
+    2300050: Details 1
+    2300052: BackAbsorberDetails
+    2300054: SteeringDetails
+    2300056: FrontLeftAngularAbsorber
+    2300058: FrontRightAngularAbsorber
+    2300060: BodyShape
+    2300062: Shape
+    2300064: Shape 1
+    3300000: //RootNode
+    3300002: BachRightWheel
+    3300004: BackDamper
+    3300006: BackLeftWheel
+    3300008: FrontLeftDamper
+    3300010: FrontLeftWheel
+    3300012: FrontRightDamper
+    3300014: FrontRightWheel
+    3300016: LeftSpringDownDetail
+    3300018: LeftSpringUpDetail
+    3300020: RightSpringDownDetail
+    3300022: RightSpringUpDetail
+    3300024: Rule
+    3300026: Spring
+    3300028: Spring 1
+    3300030: Spring 2
+    3300032: SpringDownDetail
+    3300034: SpringUpDetail
+    3300036: BodyCollider
+    3300038: RuleCollider
+    3300040: BackAbsorber
+    3300042: FrontLeftAbsorber
+    3300044: FrontRightAbsorber
+    3300046: BackSpringUpDetail
+    3300048: Details
+    3300050: Details 1
+    3300052: BackAbsorberDetails
+    3300054: SteeringDetails
+    3300056: FrontLeftAngularAbsorber
+    3300058: FrontRightAngularAbsorber
+    3300060: BodyShape
+    3300062: Shape
+    3300064: Shape 1
+    4300000: Body
+    4300002: BachRightWheel
+    4300004: BackLeftWheel
+    4300006: FrontRightWheel
+    4300008: FrontLeftWheel
+    4300010: BackDamper
+    4300012: SpringDownDetail
+    4300014: Spring
+    4300016: Rule
+    4300018: LeftSpringUpDetail
+    4300020: RightSpringUpDetail
+    4300022: FrontRightDamper
+    4300024: RightSpringDownDetail
+    4300026: Spring
+    4300028: FrontLeftDamper
+    4300030: LeftSpringDownDetail
+    4300032: Spring
+    4300034: SpringUpDetail
+    4300036: BodyCollider
+    4300038: RuleCollider
+    4300040: BackAbsorber
+    4300042: FrontLeftAbsorber
+    4300044: FrontRightAbsorber
+    4300046: BackSpringUpDetail
+    4300048: Details
+    4300050: Details
+    4300052: BackAbsorberDetails
+    4300054: SteeringDetails
+    4300056: FrontRightAngularAbsorber
+    4300058: FrontLeftAngularAbsorber
+    4300060: BodyShape
+    4300062: Shape
+    4300064: Shape
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

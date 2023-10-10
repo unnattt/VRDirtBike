@@ -1,0 +1,248 @@
+fileFormatVersion: 2
+guid: 02c454dacdf7c4b3a8ad6859ead112d0
+timeCreated: 1477082043
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: BackLeftAngularAbsorber
+    100002: BackLeftWheel
+    100004: BackLeftWheelPivot
+    100006: BackRightAngularAbsorber
+    100008: BackRightWheel
+    100010: BackRightWheelPivot
+    100012: BodyCollider
+    100014: CenterOfMass
+    100016: DownPivot
+    100018: DownPivot 1
+    100020: DownPivot 2
+    100022: DownPivot 3
+    100024: FrontLeftAngularAbsorber
+    100026: FrontLeftWheel
+    100028: FrontLeftWheelPivot
+    100030: FrontRightAngularAbsorber
+    100032: FrontRightWheel
+    100034: FrontRightWheelPivot
+    100036: LeftSpringDownDetail
+    100038: LeftSpringDownDetail 1
+    100040: LeftSpringUpDetail
+    100042: LeftSpringUpDetail 1
+    100044: //RootNode
+    100046: RightSpringDownDetail
+    100048: RightSpringDownDetail 1
+    100050: RightSpringUpDetail
+    100052: RightSpringUpDetail 1
+    100054: Spring
+    100056: Spring 1
+    100058: Spring 2
+    100060: Spring 3
+    100062: Steering
+    100064: SteeringDetails
+    100066: UpPivot
+    100068: UpPivot 1
+    100070: UpPivot 2
+    100072: UpPivot 3
+    100074: BodyShape
+    100076: FrontLeftWheelTurn
+    100078: FrontRightWheelTurn
+    100080: Shape
+    100082: Shape 1
+    100084: Shape 2
+    100086: Shape 3
+    400000: BackLeftAngularAbsorber
+    400002: BackLeftWheel
+    400004: BackLeftWheelPivot
+    400006: BackRightAngularAbsorber
+    400008: BackRightWheel
+    400010: BackRightWheelPivot
+    400012: BodyCollider
+    400014: CenterOfMass
+    400016: DownPivot
+    400018: DownPivot 1
+    400020: DownPivot 2
+    400022: DownPivot 3
+    400024: FrontLeftAngularAbsorber
+    400026: FrontLeftWheel
+    400028: FrontLeftWheelPivot
+    400030: FrontRightAngularAbsorber
+    400032: FrontRightWheel
+    400034: FrontRightWheelPivot
+    400036: LeftSpringDownDetail
+    400038: LeftSpringDownDetail 1
+    400040: LeftSpringUpDetail
+    400042: LeftSpringUpDetail 1
+    400044: //RootNode
+    400046: RightSpringDownDetail
+    400048: RightSpringDownDetail 1
+    400050: RightSpringUpDetail
+    400052: RightSpringUpDetail 1
+    400054: Spring
+    400056: Spring 1
+    400058: Spring 2
+    400060: Spring 3
+    400062: Steering
+    400064: SteeringDetails
+    400066: UpPivot
+    400068: UpPivot 1
+    400070: UpPivot 2
+    400072: UpPivot 3
+    400074: BodyShape
+    400076: FrontLeftWheelTurn
+    400078: FrontRightWheelTurn
+    400080: Shape
+    400082: Shape 1
+    400084: Shape 2
+    400086: Shape 3
+    2300000: BackLeftAngularAbsorber
+    2300002: BackLeftWheel
+    2300004: BackRightAngularAbsorber
+    2300006: BackRightWheel
+    2300008: BodyCollider
+    2300010: FrontLeftAngularAbsorber
+    2300012: FrontLeftWheel
+    2300014: FrontRightAngularAbsorber
+    2300016: FrontRightWheel
+    2300018: LeftSpringDownDetail
+    2300020: LeftSpringDownDetail 1
+    2300022: LeftSpringUpDetail
+    2300024: LeftSpringUpDetail 1
+    2300026: //RootNode
+    2300028: RightSpringDownDetail
+    2300030: RightSpringDownDetail 1
+    2300032: RightSpringUpDetail
+    2300034: RightSpringUpDetail 1
+    2300036: Spring
+    2300038: Spring 1
+    2300040: Spring 2
+    2300042: Spring 3
+    2300044: SteeringDetails
+    2300046: BodyShape
+    2300048: Shape
+    2300050: Shape 1
+    2300052: Shape 2
+    2300054: Shape 3
+    3300000: BackLeftAngularAbsorber
+    3300002: BackLeftWheel
+    3300004: BackRightAngularAbsorber
+    3300006: BackRightWheel
+    3300008: BodyCollider
+    3300010: FrontLeftAngularAbsorber
+    3300012: FrontLeftWheel
+    3300014: FrontRightAngularAbsorber
+    3300016: FrontRightWheel
+    3300018: LeftSpringDownDetail
+    3300020: LeftSpringDownDetail 1
+    3300022: LeftSpringUpDetail
+    3300024: LeftSpringUpDetail 1
+    3300026: //RootNode
+    3300028: RightSpringDownDetail
+    3300030: RightSpringDownDetail 1
+    3300032: RightSpringUpDetail
+    3300034: RightSpringUpDetail 1
+    3300036: Spring
+    3300038: Spring 1
+    3300040: Spring 2
+    3300042: Spring 3
+    3300044: SteeringDetails
+    3300046: BodyShape
+    3300048: Shape
+    3300050: Shape 1
+    3300052: Shape 2
+    3300054: Shape 3
+    4300000: Body
+    4300002: FrontRightAngularAbsorber
+    4300004: RightSpringDownDetail
+    4300006: Spring
+    4300008: RightSpringUpDetail
+    4300010: FrontRightWheel
+    4300012: FrontLeftAngularAbsorber
+    4300014: FrontLeftWheel
+    4300016: LeftSpringUpDetail
+    4300018: LeftSpringDownDetail
+    4300020: Spring
+    4300022: SteeringDetails
+    4300024: BodyCollider
+    4300026: BackRightAngularAbsorber
+    4300028: BackRightWheel
+    4300030: RightSpringDownDetail
+    4300032: Spring
+    4300034: RightSpringUpDetail
+    4300036: BackLeftAngularAbsorber
+    4300038: BackLeftWheel
+    4300040: LeftSpringDownDetail
+    4300042: Spring
+    4300044: LeftSpringUpDetail
+    4300046: BodyShape
+    4300048: Shape
+    4300050: Shape
+    4300052: Shape
+    4300054: Shape
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
