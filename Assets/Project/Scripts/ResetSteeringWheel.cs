@@ -36,23 +36,23 @@ namespace Yudiz.DirtBikeVR.CoreGamePlay
             //Debug.LogWarning("Current Speed : " + carController.CarSpeedRigidBody());
             float currentSpeed = steeringWheel.Map(carController.CarSpeedRigidBody(), 0, carController.maxSpeed, 0, 1);
             float curveValue = steeringRotationCurve.Evaluate(currentSpeed);
+            rotationSpeed = steeringRotateStep * curveValue;
             //Debug.LogWarning("Curve Value : " + curveValue);
-            rotationSpeed =  steeringRotateStep * curveValue;
             //Debug.LogWarning("Rotation Speed: " + rotationSpeed);
         }
 
         private void ResetSteering()
         {
-            if(!steeringWheel.wheelBeingHeld && steeringWheel.overallRotation > 5)
-            {
-                Debug.Log("Reseting Steering");
-                steeringWheel.RotateSteeringWithHands(rotationSpeed * -1);
-            }
-            else if(!steeringWheel.wheelBeingHeld && steeringWheel.overallRotation < -5)
-            {
-                Debug.Log("Reseting Steering");
-                steeringWheel.RotateSteeringWithHands(rotationSpeed);
-            }
+            //if(!steeringWheel.wheelBeingHeld && steeringWheel.overallRotation > 5)
+            //{
+            //    Debug.Log("Reseting Steering");
+            //    steeringWheel.RotateSteeringWithHands(rotationSpeed * -1);
+            //}
+            //else if(!steeringWheel.wheelBeingHeld && steeringWheel.overallRotation < -5)
+            //{
+            //    Debug.Log("Reseting Steering");
+            //    steeringWheel.RotateSteeringWithHands(rotationSpeed);
+            //}
         }
         #endregion
 

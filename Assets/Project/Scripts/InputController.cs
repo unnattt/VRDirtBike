@@ -17,6 +17,8 @@ namespace Yudiz.DirtBikeVR.Managers
 
         public static Action OnCarStart;
 
+        public static Action OnResetCarPos;
+
         [HideInInspector]
         public float InputValue;        
         #endregion
@@ -24,12 +26,22 @@ namespace Yudiz.DirtBikeVR.Managers
         #region PRIVATE_VARS      
         [SerializeField] private InputActionReference leftHandActivate;
         [SerializeField] private InputActionReference rightHandActivate;
+        [SerializeField] private InputActionReference ResetBikePos;
         #endregion
 
         #region UNITY_CALLBACKS
         private void Awake()
         {
             instance = this;            
+        }
+        private void OnEnable()
+        {
+            ResetBikePos.action.performed += ResetBikePosition;
+        }
+
+        private void ResetBikePosition(InputAction.CallbackContext obj)
+        {
+            OnResetCarPos?.Invoke();
         }
 
         private void Update()

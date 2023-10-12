@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Yudiz.DirtBikeVR.Camera
+namespace Yudiz.CarVR.Camera
 {
     public class LookAroundCamera : MonoBehaviour
     {

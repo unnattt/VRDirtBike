@@ -1,39 +1,87 @@
-using System;
 using UnityEngine;
-//using Yudiz.CarVR.Managers;
+using UnityEngine.XR;
+using Yudiz.DirtBikeVR.Managers;
 using UnityEngine.XR.Interaction.Toolkit;
+using System;
 
 namespace Yudiz.DirtBikeVR.CoreGamePlay
 {
     public class Hands : MonoBehaviour
     {
         #region PUBLIC_VARS
-        //public static event Action OnInput;
+        //public Transform leftHand;
+        //public Transform rightHand;
+        private Vector3 bothHandIntitialPosManual;
         #endregion
 
         #region PRIVATE_VARS        
+        [SerializeField] private Transform steeringReference;
         [SerializeField] private SteeringWheel steeringWheel;
+
+        [SerializeField] private Transform leftHandController;
+        [SerializeField] private Transform rightHandController;
+
+        [SerializeField] private XRSimpleInteractable leftGrabPoint;
+        [SerializeField] private XRSimpleInteractable rightGrabPoint;
 
         private IXRSelectInteractor controller1;
         private IXRSelectInteractor controller2;
 
         private Vector3 bothHandIntitialPos;
         private Vector3 oneHandInitialPos;
-        //private Vector3 initialHandPos;
+
+        private Vector3 initialController1Position;
+        private Vector3 initialController2Position;
+        private Quaternion initialSteeringWheelRotation;
+
+        public Transform middleHoldPoint;
+
+
+        private void BothHandInitialPosition2()
+        {
+            Debug.Log("Calculating BothHand Position");
+            initialController1Position = controller1.transform.position; // right hand
+            initialController2Position = controller2.transform.position; // Left hand
+            initialSteeringWheelRotation = steeringWheel.transform.rotation;
+        }
         #endregion
 
         #region UNITY_CALLBACKS
-        private void Start()
+        private void OnEnable()
         {
-            Debug.Log("Inside - HandsScript");
-            
-            //if (steeringWheel == null) { Debug.Log("Steering Wheel Empty"); }
+            leftGrabPoint.selectEntered.AddListener(OnLeftGrabbed);
+            leftGrabPoint.selectExited.AddListener(OnLeftReleased);
 
+            rightGrabPoint.selectEntered.AddListener(OnRightGrabbed);
+            rightGrabPoint.selectExited.AddListener(OnRightReleased);
         }
-        private void Update()
+
+        private void OnLeftGrabbed(SelectEnterEventArgs arg0)
+        {
+            Debug.Log("On Left Grabbed");
+            leftHandController = arg0.interactorObject.transform;
+        }
+
+        private void OnLeftReleased(SelectExitEventArgs arg0)
+        {
+            Debug.Log("On Left Released");
+            leftHandController = null;
+        }
+
+        private void OnRightGrabbed(SelectEnterEventArgs arg0)
+        {
+            rightHandController = arg0.interactorObject.transform;
+        }
+
+        private void OnRightReleased(SelectExitEventArgs arg0)
+        {
+            rightHandController = null;
+        }
+
+        public float rotateSpeed = 1;
+        private void FixedUpdate()
         {
             CalculateHandAngle();
-            //CalculateHandAngle2();
         }
         #endregion
 
@@ -41,116 +89,46 @@ namespace Yudiz.DirtBikeVR.CoreGamePlay
         #endregion
 
         #region PUBLIC_FUNCTIONS
-        private void BothHandInitialPosition()
-        {
-            Debug.Log("Calculating BothHand Position");
-            bothHandIntitialPos = controller1.transform.position - controller2.transform.position;
-        }
-
-        private void OneHandInitialPosition()
-        {
-            Debug.Log("Calculating OneHand Position");
-            oneHandInitialPos = transform.position - controller1.transform.position;
-        }
-
-        public void OnEntered(SelectEnterEventArgs eventArgs)
-        {
-            Debug.Log("Inside - OnEntered");
-            if (controller1 == null)
-            {
-                Debug.Log("Controller1 is Touching");
-                controller1 = eventArgs.interactorObject;
-                //steeringWheel.wheelBeingHeld = true;
-                OneHandInitialPosition();
-                //OnInput?.Invoke();
-            }
-            else
-            {
-                Debug.Log("Controller2 is Touching");
-                controller2 = eventArgs.interactorObject;
-                //steeringWheel.wheelBeingHeld = true;
-                BothHandInitialPosition();
-                //OnInput?.Invoke();
-            }
-        }
-
-        public void OnExit(SelectExitEventArgs eventArgs)
-        {
-            Debug.Log("Inside - OnExit");
-            if (controller1 == eventArgs.interactorObject)
-            {                
-                Debug.Log("Controller1 has Exited");
-                //steeringWheel.wheelBeingHeld = false;
-                controller1 = null;
-            }
-            else
-            {
-                Debug.Log("Controller2 has Exited");
-                //steeringWheel.wheelBeingHeld = false;
-                controller2 = null;
-            }
-        }
         #endregion
 
         #region PRIVATE_FUNCTIONS        
         private void CalculateHandAngle()
         {
-            if (controller1 != null && controller2 != null)
+            if (leftHandController != null && rightHandController != null)
             {
-                Debug.Log("BothHands on Steering");
-                steeringWheel.wheelBeingHeld = true;
-                Vector3 newDifference = controller1.transform.position - controller2.transform.position;
-                float angle = Vector3.SignedAngle(bothHandIntitialPos, newDifference, transform.up);
-                //Debug.LogWarning($"Angle:: {angle}");
-                //steeringWheel.RotateSteeringWheelWithHands(angle);
-                Debug.Log("Angle(In Both Hands) : " + angle);
-                steeringWheel.RotateSteeringWithHands(angle);
-                bothHandIntitialPos = newDifference;
+
+
+                //Vector3 newDifference = controller1.transform.position - controller2.transform.position;
+                Vector3 newDifference = rightHandController.transform.position - leftHandController.transform.position;
+                newDifference.y = 0;
+                Vector3 steeringRight = steeringReference.right;
+                steeringRight.y = 0;
+                float angle = Vector3.SignedAngle(steeringRight, newDifference, steeringReference.up);
+                steeringWheel.RotateSteeringBikeWithHands(angle);
             }
-            else if (controller1 != null && controller2 == null)
+            else if ((leftHandController != null && rightHandController == null) || (leftHandController == null && rightHandController != null))
             {
-                Debug.Log("One hand on Steering");
-                steeringWheel.wheelBeingHeld = true;
-                Vector3 newDifference = transform.position - controller1.transform.position;
-                float angle = Vector3.SignedAngle(oneHandInitialPos, newDifference, transform.up);
-                //steeringWheel.RotateSteeringWheelWithHands(angle);
-                Debug.Log("Angle(In One Hands) : " + angle);
-                steeringWheel.RotateSteeringWithHands(angle);
-                oneHandInitialPos = newDifference;
-            }
-            else if (controller1 == null && controller2 == null)
-            {
-                //steeringWheel.ResetSteeringWheel();
-                steeringWheel.wheelBeingHeld = false;
-                //Vector3 newDifference = initialHandPos;
-                //float angle = Vector3.SignedAngle(oneHandInitialPos, newDifference, transform.up);
-                ////steeringWheel.RotateSteeringWheelWithHands(angle);
-                //Debug.Log("Angle(In One Hands) : " + angle);
-                //steeringWheel.RotateSteeringWithHands(angle);
-                //oneHandInitialPos = newDifference;
-            }
-            else if (controller1 == null && controller2 != null)
-            {
-                steeringWheel.wheelBeingHeld = true;
-                Vector3 newDifference = transform.position - controller2.transform.position;
-                float angle = Vector3.SignedAngle(oneHandInitialPos, newDifference, transform.up);
-                //steeringWheel.RotateSteeringWheelWithHands(angle);
-                Debug.Log("Angle(In One Hands) : " + angle);
-                steeringWheel.RotateSteeringWithHands(angle);
-                oneHandInitialPos = newDifference;
+
+                Vector3 newDifference;
+                if (leftHandController != null)
+                {
+                    newDifference = (middleHoldPoint.position - leftHandController.transform.position).normalized;
+                }
+                else
+                {
+                    newDifference = (rightHandController.transform.position - middleHoldPoint.position).normalized;
+                }
+                Vector3 steeringRight = steeringReference.right;
+                steeringRight.y = 0;
+
+                newDifference.y = 0;
+                float angle = Vector3.SignedAngle(steeringRight, newDifference, steeringReference.up);
+                steeringWheel.RotateSteeringBikeWithHands(angle);
             }
         }
 
 
         #endregion
 
-        #region CO-ROUTINES
-        #endregion
-
-        #region EVENT_HANDLERS
-        #endregion
-
-        #region UI_CALLBACKS
-        #endregion
     }
 }

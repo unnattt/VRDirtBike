@@ -649,9 +649,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Acclerate",
+                    "name": "Brake",
                     "type": "Value",
-                    "id": "3df6157f-9d78-4379-b664-ede3586d6a47",
+                    "id": "edf95dad-8253-4345-a1bf-eb69ac048809",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -710,6 +710,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "ResetBikePos",
+                    "type": "Button",
+                    "id": "ab7d485f-2d6a-4ec3-8f31-ce2cb62d6061",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -858,12 +867,23 @@
                 },
                 {
                     "name": "",
-                    "id": "3c43f6d7-4b58-4094-81e7-35bc422e677d",
+                    "id": "8d74102e-9313-449c-a9dd-333cd4ca8f80",
                     "path": "<XRController>{LeftHand}/triggerPressed",
                     "interactions": "",
                     "processors": "",
                     "groups": "Generic XR Controller",
-                    "action": "Acclerate",
+                    "action": "Brake",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ca46c6a6-0899-4b5f-9929-f45a75eac8c8",
+                    "path": "<XRController>{RightHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ResetBikePos",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -1385,9 +1405,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Reverse",
+                    "name": "Acclerate",
                     "type": "Value",
-                    "id": "ded53524-2f21-4f77-91b6-aa05066902fb",
+                    "id": "c6997a3e-bcc4-4af2-b6bd-6ae62e8db878",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -1446,6 +1466,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "CarResetButton",
+                    "type": "Button",
+                    "id": "12db1f34-3027-4d48-ad2a-aabe246f976d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1594,12 +1623,23 @@
                 },
                 {
                     "name": "",
-                    "id": "2b892c84-143b-4c2d-a05b-67ede8ccf27b",
+                    "id": "76ccde2b-9d44-4f62-8435-d8ee16493445",
                     "path": "<XRController>{RightHand}/triggerPressed",
                     "interactions": "",
                     "processors": "",
                     "groups": "Generic XR Controller",
-                    "action": "Reverse",
+                    "action": "Acclerate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "062869fd-9790-4219-a375-2a7b7825182b",
+                    "path": "<XRController>{RightHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CarResetButton",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

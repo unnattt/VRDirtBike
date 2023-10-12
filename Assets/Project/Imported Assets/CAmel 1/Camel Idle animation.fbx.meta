@@ -1,0 +1,324 @@
+fileFormatVersion: 2
+guid: 6a1d6020865ca4c70912d534aa7a3601
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CAMELUNA
+    second: {fileID: 2100000, guid: 4098a3e2e20f94555a6e64458e1e9531, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CAMEL_EYE
+    second: {fileID: 2100000, guid: cde778f7a3e8c42268d498449ea22ebe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Camel_body
+    second: {fileID: 2100000, guid: ef5548e3ca34245449cd4491fc9fc947, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #1
+    second: {fileID: 2100000, guid: 635d23e9fcd2140a7a8a33eca4ad8ea3, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+      human bone 'LeftUpperArm' not found\n"
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      internalID: 1827226128182048838
+      firstFrame: 0
+      lastFrame: 1100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: Camel Idle animation(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Camel
+      parentName: Camel Idle animation(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Camel_locator
+      parentName: Camel Idle animation(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Camel_joint
+      parentName: Camel_locator
+      position: {x: 0.3836357, y: 4.606579, z: -0.48259902}
+      rotation: {x: 0.38091958, y: -0.38091958, z: 0.59573513, w: 0.5957351}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000002}
+    - name: Spine_1
+      parentName: Camel_joint
+      position: {x: -1.0010935, y: 0, z: -2.842171e-16}
+      rotation: {x: -0.000000029802322, y: -0.13602571, z: -0.000000029802322, w: 0.9907054}
+      scale: {x: 1.0000002, y: 1.0000004, z: 1}
+    - name: Spine_2
+      parentName: Spine_1
+      position: {x: -1.3980786, y: 1.7676846e-16, z: 4.973799e-16}
+      rotation: {x: 0.00000018680383, y: -0.61695737, z: 0.000000039630425, w: 0.78699666}
+      scale: {x: 1, y: 0.9999999, z: 1}
+    - name: Spine_3
+      parentName: Spine_2
+      position: {x: -1.5391911, y: 2.4595105e-16, z: 2.0250468e-15}
+      rotation: {x: -0.000000034595683, y: 0.03770407, z: -0.00000002407272, w: 0.99928904}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Neck1
+      parentName: Spine_3
+      position: {x: -1.5701066, y: 2.0289159e-16, z: 1.1368684e-15}
+      rotation: {x: -0.000000029408412, y: 0.18174486, z: 0.00000004020395, w: -0.9833458}
+      scale: {x: 1.0000005, y: 1.0000004, z: 1.0000005}
+    - name: Neck2
+      parentName: Neck1
+      position: {x: -1.2627434, y: 4.2577385e-17, z: 7.105427e-17}
+      rotation: {x: 0.000000007255731, y: -0.4559085, z: 0.000000053508938, w: 0.8900267}
+      scale: {x: 1.0000001, y: 1, z: 0.99999976}
+    - name: Neck3
+      parentName: Neck2
+      position: {x: -1.1132902, y: 3.0367727e-16, z: 4.2632563e-16}
+      rotation: {x: -0.000000004340288, y: -0.108339645, z: -0.0000000013361443, w: 0.9941139}
+      scale: {x: 0.9999999, y: 1, z: 1.0000001}
+    - name: Head
+      parentName: Neck3
+      position: {x: -0.66409016, y: 2.8763132e-16, z: -2.1316282e-16}
+      rotation: {x: 0.0000000020521351, y: 0.5560918, z: -0.000000039742304, w: 0.83112097}
+      scale: {x: 0.99999976, y: 1, z: 0.9999999}
+    - name: Camel_joint8
+      parentName: Head
+      position: {x: -2.0628767, y: 6.096415e-17, z: -3.5527135e-16}
+      rotation: {x: 1.776356e-15, y: -0.000000029802308, z: -1.5543115e-15, w: 1}
+      scale: {x: 1.0000004, y: 1, z: 1.0000002}
+    - name: R_Front_Leg1
+      parentName: Spine_3
+      position: {x: -0.8065875, y: 0.896465, z: 1.6765074}
+      rotation: {x: 0.3871289, y: 0.50886047, z: 0.46554396, w: 0.6119323}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1.0000002}
+    - name: R_Front_Leg2
+      parentName: R_Front_Leg1
+      position: {x: -2.272622, y: -4.0202215e-17, z: 4.7073454e-16}
+      rotation: {x: 0.00012817974, y: 0.001655131, z: 0.10305274, w: 0.99467456}
+      scale: {x: 1.0000005, y: 1.0000001, z: 1}
+    - name: R_Front_Leg3
+      parentName: R_Front_Leg2
+      position: {x: -2.1525002, y: 4.0389133e-16, z: -1.4876988e-16}
+      rotation: {x: 0.041286323, y: -0.017369034, z: 0.033873368, w: 0.9984219}
+      scale: {x: 0.9999999, y: 1.0000001, z: 0.9999999}
+    - name: R_Front_Leg4
+      parentName: R_Front_Leg3
+      position: {x: -0.80984753, y: -2.4739286e-16, z: 0}
+      rotation: {x: -0.0000000037252885, y: -0, z: 0.0000000018626443, w: 1}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000001}
+    - name: L_Front_leg1
+      parentName: Spine_3
+      position: {x: -0.80659163, y: -0.89646465, z: 1.6765027}
+      rotation: {x: 0.0029095532, y: 0.6393743, z: 0.0034988942, w: 0.76888216}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: L_Front_leg2
+      parentName: L_Front_leg1
+      position: {x: -2.2726212, y: 9.316116e-17, z: -9.681145e-16}
+      rotation: {x: 0.0012423319, y: 0.011673596, z: 0.096761815, w: 0.9952383}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: L_Front_leg3
+      parentName: L_Front_leg2
+      position: {x: -2.1525044, y: -6.9477623e-16, z: 3.1086245e-17}
+      rotation: {x: -0.051017147, y: -0.5010498, z: -0.087511525, w: 0.85946965}
+      scale: {x: 1, y: 0.99999976, z: 1}
+    - name: L_Front_leg4
+      parentName: L_Front_leg3
+      position: {x: -0.8098529, y: -7.0550936e-17, z: -3.5527135e-16}
+      rotation: {x: -0, y: -0, z: -0.000000007450579, w: 1}
+      scale: {x: 1.0000002, y: 1.0000004, z: 1.0000002}
+    - name: R_back_leg1
+      parentName: Spine_1
+      position: {x: 1.2656589, y: 0.7672709, z: 1.1727835}
+      rotation: {x: -0.024340622, y: 0.7275267, z: -0.021606216, w: 0.6853071}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: R_back_leg2
+      parentName: R_back_leg1
+      position: {x: -3.336486, y: -1.3544721e-16, z: 0}
+      rotation: {x: 0.013964472, y: -0.112111986, z: -0.044679552, w: 0.99259233}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1}
+    - name: R_back_leg3
+      parentName: R_back_leg2
+      position: {x: -2.5808394, y: 4.730244e-16, z: -1.2168044e-15}
+      rotation: {x: 0.053020086, y: -0.6263265, z: 0.06560438, w: 0.774984}
+      scale: {x: 0.99999976, y: 0.9999994, z: 0.9999999}
+    - name: R_back_leg4
+      parentName: R_back_leg3
+      position: {x: -0.6695957, y: 2.8527853e-16, z: -5.8619773e-16}
+      rotation: {x: -0.0069317673, y: 0.013324195, z: -0.00094966544, w: 0.99988675}
+      scale: {x: 1, y: 1.0000001, z: 0.9999999}
+    - name: L_Back_leg1
+      parentName: Spine_1
+      position: {x: 1.2656598, y: -0.76727057, z: 1.1727886}
+      rotation: {x: 0.029080778, y: 0.73643595, z: 0.026668785, w: 0.67535573}
+      scale: {x: 0.9999999, y: 1, z: 0.9999999}
+    - name: L_Back_leg2
+      parentName: L_Back_leg1
+      position: {x: -3.3364825, y: -2.7755576e-16, z: 2.131628e-15}
+      rotation: {x: -0.013964685, y: -0.1121141, z: 0.044680025, w: 0.9925921}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: L_Back_leg3
+      parentName: L_Back_leg2
+      position: {x: -2.5808382, y: -3.9874354e-16, z: -6.3060666e-16}
+      rotation: {x: -0.05301991, y: -0.62632465, z: -0.06560443, w: 0.7749855}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000002}
+    - name: L_Back_leg4
+      parentName: L_Back_leg3
+      position: {x: -0.66959065, y: -5.4509115e-17, z: -2.4868996e-16}
+      rotation: {x: -0.0000000037252894, y: 0.000000029802315, z: 0.0000000037252894, w: 1}
+      scale: {x: 1.0000002, y: 1, z: 1.0000001}
+    - name: Tail1
+      parentName: Camel_joint
+      position: {x: 0.41585, y: -1.5777217e-31, z: 0.14295933}
+      rotation: {x: -0.029138632, y: 0.615494, z: -0.007828731, w: 0.78756386}
+      scale: {x: 1.0000002, y: 1.0000004, z: 1.0000001}
+    - name: Tail2
+      parentName: Tail1
+      position: {x: -0.5112736, y: -1.1352555e-16, z: -1.2079227e-15}
+      rotation: {x: 0.0010552777, y: -0.32473028, z: -0.0024404605, w: 0.9458029}
+      scale: {x: 0.9999999, y: 0.99999976, z: 1}
+    - name: Tail3
+      parentName: Tail2
+      position: {x: -0.60454834, y: -5.70722e-17, z: -9.237055e-16}
+      rotation: {x: 0.022296691, y: 0.39960223, z: 0.021215066, w: 0.91617185}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000001}
+    - name: Tail4
+      parentName: Tail3
+      position: {x: -0.8110111, y: 1.9712657e-17, z: -1.3855583e-15}
+      rotation: {x: -0.000000031628296, y: -0.1943885, z: -0.000000011170167, w: 0.98092467}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1}
+    - name: Tail5
+      parentName: Tail4
+      position: {x: -1.0480107, y: 8.8896386e-17, z: -1.5099033e-16}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000002, z: 0.9999999}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
