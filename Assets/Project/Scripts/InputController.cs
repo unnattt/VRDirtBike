@@ -13,11 +13,16 @@ namespace Yudiz.DirtBikeVR.Managers
         //public static Action OnRotateSteering;
         public static Action<float> OnAccelarate;
         //public static Action<float> OnReverseOrBrake;
+        [SerializeField] private Canvas canvas;
         public static Action OnBreaking;
 
         public static Action OnCarStart;
 
         public static Action OnResetCarPos;
+
+        public static Action<bool> ParticalPlayStop;
+
+        bool isButtonOn;
 
         [HideInInspector]
         public float InputValue;        
@@ -27,6 +32,7 @@ namespace Yudiz.DirtBikeVR.Managers
         [SerializeField] private InputActionReference leftHandActivate;
         [SerializeField] private InputActionReference rightHandActivate;
         [SerializeField] private InputActionReference ResetBikePos;
+        [SerializeField] private InputActionReference TutorialImage;        
         #endregion
 
         #region UNITY_CALLBACKS
@@ -37,6 +43,23 @@ namespace Yudiz.DirtBikeVR.Managers
         private void OnEnable()
         {
             ResetBikePos.action.performed += ResetBikePosition;
+            TutorialImage.action.performed += DisableImage;
+        }
+
+        private void DisableImage(InputAction.CallbackContext obj)
+        {
+            //throw new NotImplementedException();
+            if(isButtonOn)
+            {
+
+            canvas.enabled = false;
+                isButtonOn = false;
+            }
+            else
+            {
+                canvas.enabled = true;
+                isButtonOn = true;
+            }
         }
 
         private void ResetBikePosition(InputAction.CallbackContext obj)
@@ -53,6 +76,7 @@ namespace Yudiz.DirtBikeVR.Managers
             {
                 OnAccelarate?.Invoke(0);
                 OnCarStart?.Invoke();
+                ParticalPlayStop?.Invoke(false);
             }
             else
             {
@@ -61,6 +85,7 @@ namespace Yudiz.DirtBikeVR.Managers
                     //OnCarStart?.Invoke();
                     OnAccelarate?.Invoke(1);
                     OnCarStart?.Invoke();
+                    ParticalPlayStop?.Invoke(true);
                 }
 
                 if (rightHandActivate.action.ReadValue<float>() > 0)
@@ -68,6 +93,8 @@ namespace Yudiz.DirtBikeVR.Managers
                     //OnCarStart?.Invoke();
                     OnAccelarate?.Invoke(-1);
                     OnCarStart?.Invoke();
+                    //ParticalPlayStop?.Invoke(true, false);
+                    ParticalPlayStop?.Invoke(false);
                 }
             }
         }

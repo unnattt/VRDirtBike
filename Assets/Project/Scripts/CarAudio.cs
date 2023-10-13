@@ -16,7 +16,7 @@ namespace Yudiz.DirtBikeVR.CoreGamePlay
 
         private float minSpeed = 0.1f;
         private float maxSpeed;
-        private float minPitch = 0.5f;
+        private float minPitch = 0.8f;
         private float maxPitch = 1.5f;
 
         private bool isEngineRunning;
@@ -87,7 +87,7 @@ namespace Yudiz.DirtBikeVR.CoreGamePlay
         {           
             AudioManager.instance.PlaySound(AudioTrack.BikeStart, false);
             yield return new WaitForSeconds(0.5f);
-            AudioManager.instance.PlaySound(AudioTrack.BikeRunning, true);
+            AudioManager.instance.PlaySound(AudioTrack.BikeEngine, true);
             isEngineRunning = true;            
         }
         #endregion

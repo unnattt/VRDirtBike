@@ -29,6 +29,10 @@ namespace Yudiz.DirtBikeVR.CoreGamePlay
         [SerializeField] float currentSpeed;
         [SerializeField] float currentmagnitude;
 
+        [SerializeField] List<ParticleSystem> allWheelParticals;
+        //[SerializeField] ParticleSystem frontRightWheel;
+        //[SerializeField] ParticleSystem backLeftWheel;
+        //[SerializeField] ParticleSystem backRightWheel;
         //[SerializeField] float maxRpmForrealPlayer;
         //[SerializeField] float currentRpmForRealPlayer;
 
@@ -137,6 +141,8 @@ namespace Yudiz.DirtBikeVR.CoreGamePlay
             InputController.OnAccelarate += AccelarateOrBrake;
             //InputController.OnBreaking += Braking;
             InputController.OnResetCarPos += ResetCarPosition;
+            InputController.ParticalPlayStop += ControllerParticalOfBike;
+
 
             //if (PhotonNetwork.IsConnected && PhotonNetwork.InRoom)
             //{
@@ -245,6 +251,7 @@ namespace Yudiz.DirtBikeVR.CoreGamePlay
 
             //InputController.OnSteer -= SteeringStarted;
             SteeringWheel.OnSteer -= SteeringStarted;
+            InputController.ParticalPlayStop -= ControllerParticalOfBike;
             //BreakingStick.OnBraking -= Braking;
             InputController.OnAccelarate -= AccelarateOrBrake;
             //InputController.OnBreaking -= Braking;
@@ -1317,57 +1324,83 @@ namespace Yudiz.DirtBikeVR.CoreGamePlay
         {
             transform.position = carsInitialPosition;
             transform.rotation = carsInitialRotation;
+            carRb.velocity = Vector3.zero;
+
         }
 
+        public void ControllerParticalOfBike(bool isEmiting)
+        {
+            if (isEmiting)
+            {
 
-        #region code related to change in InputScheme/controls
-        //public void OnChangeInputType(InputType currInputType)
-        //{
-        //    if (amIBot)
-        //        return;
-        //    // Debug.Log("Onchange input type 1");
-        //    switch (currInputType)
-        //    {
-        //        //brake is exception in all controls, it will be present in all cases.
-
-        //        case InputType.AccelerateAutoSteerTilt:
-        //            //here all onscreen controls will be turned off: accelerate auto, and steer will be from gyro, SO GYRO is ON
-        //            //autoAccelerate = true;
-        //            autoAccelerateState = 1;
-        //            steerWithGyro = true;
-        //            steeringWheel.gameObject.SetActive(false);
-        //            //forwardBackwardArrows.transform.GetChild(0).gameObject.SetActive(false);
-        //            forBackArrowsGameObject.transform.GetChild(0).gameObject.SetActive(false);
-        //            //ApplyDrag(false);
-        //            break;
-
-        //        case InputType.AccelerateAutoSteerOnScreen:
-        //            //here onscreen steering will be ON and up down controls will be OFF: accelerate auto, and steer with onscreen steering, GYRO OFF
-        //            //autoAccelerate = true;
-        //            autoAccelerateState = 1;
-        //            steerWithGyro = false;
-        //            //ApplyDrag(false);
-
-        //            steeringWheel.gameObject.SetActive(true);
-        //            //forwardBackwardArrows.transform.GetChild(0).gameObject.SetActive(false);
-        //            forBackArrowsGameObject.transform.GetChild(0).gameObject.SetActive(false);
-        //            break;
-
-        //        case InputType.AccelerateOnScreenSteerTilt:
-        //            //here onscreen up down ON, and onscreen steering will be OFF, and steering will be done with GYRO ON
-        //            autoAccelerate = false;
-        //            steerWithGyro = true;
-
-        //            steeringWheel.gameObject.SetActive(false);
-        //            //forwardBackwardArrows.transform.GetChild(0).gameObject.SetActive(true);
-        //            forBackArrowsGameObject.transform.GetChild(0).gameObject.SetActive(true);
-        //            //ApplyDrag(false);
-        //            break;
-        //    }
-        //Debug.Log("Onchange input type 2");
+                foreach (ParticleSystem particle in allWheelParticals)
+                {                   
+                    particle.Play();
+                }
+            }
+            else
+            {
+                foreach (ParticleSystem particle in allWheelParticals)
+                {
+                    particle.Stop();
+                }
+            }
+            //frontLeftWheel.Play();
+            //frontRightWheel.Play();
+            //backLeftWheel.Play();
+            //backRightWheel.Play();
+        }
     }
-    #endregion
+
+
+
+    #region code related to change in InputScheme/controls
+    //public void OnChangeInputType(InputType currInputType)
+    //{
+    //    if (amIBot)
+    //        return;
+    //    // Debug.Log("Onchange input type 1");
+    //    switch (currInputType)
+    //    {
+    //        //brake is exception in all controls, it will be present in all cases.
+
+    //        case InputType.AccelerateAutoSteerTilt:
+    //            //here all onscreen controls will be turned off: accelerate auto, and steer will be from gyro, SO GYRO is ON
+    //            //autoAccelerate = true;
+    //            autoAccelerateState = 1;
+    //            steerWithGyro = true;
+    //            steeringWheel.gameObject.SetActive(false);
+    //            //forwardBackwardArrows.transform.GetChild(0).gameObject.SetActive(false);
+    //            forBackArrowsGameObject.transform.GetChild(0).gameObject.SetActive(false);
+    //            //ApplyDrag(false);
+    //            break;
+
+    //        case InputType.AccelerateAutoSteerOnScreen:
+    //            //here onscreen steering will be ON and up down controls will be OFF: accelerate auto, and steer with onscreen steering, GYRO OFF
+    //            //autoAccelerate = true;
+    //            autoAccelerateState = 1;
+    //            steerWithGyro = false;
+    //            //ApplyDrag(false);
+
+    //            steeringWheel.gameObject.SetActive(true);
+    //            //forwardBackwardArrows.transform.GetChild(0).gameObject.SetActive(false);
+    //            forBackArrowsGameObject.transform.GetChild(0).gameObject.SetActive(false);
+    //            break;
+
+    //        case InputType.AccelerateOnScreenSteerTilt:
+    //            //here onscreen up down ON, and onscreen steering will be OFF, and steering will be done with GYRO ON
+    //            autoAccelerate = false;
+    //            steerWithGyro = true;
+
+    //            steeringWheel.gameObject.SetActive(false);
+    //            //forwardBackwardArrows.transform.GetChild(0).gameObject.SetActive(true);
+    //            forBackArrowsGameObject.transform.GetChild(0).gameObject.SetActive(true);
+    //            //ApplyDrag(false);
+    //            break;
+    //    }
+    //Debug.Log("Onchange input type 2");
 }
+#endregion
 
 public enum BrakeType
 {

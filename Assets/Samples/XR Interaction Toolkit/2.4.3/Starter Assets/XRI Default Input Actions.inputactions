@@ -719,6 +719,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "tutorial",
+                    "type": "Button",
+                    "id": "298e79a3-025f-4fc9-9e2f-d8f6a8371255",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -884,6 +893,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "ResetBikePos",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "605da32d-532c-4508-9d5d-fb81c56c8102",
+                    "path": "<XRController>{RightHand}/primary",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "tutorial",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
